@@ -43,6 +43,13 @@
                 }
             }
         },
+        "resources": {
+            "css": [
+                {
+                    "uri": "css/style.css"
+                }
+            ]
+        },
         "contentDensities": {
             "compact": false,
             "cozy": false
