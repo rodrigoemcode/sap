@@ -14,6 +14,7 @@ sap.ui.define([
             MessageToast.show(sMsg);
         },
         onOpenDialog : function () {
+            var oView = this.getView();
 
             //create dialog lazily
             if (!this.pDialog) {
