@@ -9,15 +9,15 @@
         "applicationVersion": {
             "version": "1.0.0"
         },
-		"dataSources": {
-			"invoiceRemote": {
-				"uri": "https://services.odata.org/V3/Northwind/Northwind.svc/",
-				"type": "OData",
-				"settings": {
-					"odataVersion": "2.0"
-				}
-			}
-		}
+        "dataSources": {
+            "invoiceRemote": {
+                "uri": "https://services.odata.org/V3/Northwind/Northwind.svc/",
+                "type": "OData",
+                "settings": {
+                    "odataVersion": "2.0"
+                }
+            }
+        }
     },
     "sap.ui": {
         "technology": "UI5",
@@ -52,7 +52,39 @@
                 }
             },
             "invoice": {
-				"dataSource": "invoiceRemote"
+                "dataSource": "invoiceRemote"
+            }
+        },
+        "routing": {
+            "config": {
+                "routerClass": "sap.m.routing.Router",
+                "type": "View",
+                "viewType": "XML",
+                "path": "sap.ui.demo.walkthrough.view",
+                "controlId": "app",
+                "controlAggregation": "pages"
+            },
+            "routes": [
+                {
+                    "pattern": "",
+                    "name": "overview",
+                    "target": "overview"
+                },
+                {
+                    "pattern": "detail",
+                    "name": "detail",
+                    "target": "detail"
+                }
+            ],
+            "targets": {
+                "overview": {
+                    "id": "overview",
+                    "name": "Overview"
+                },
+                "detail": {
+                    "id": "detail",
+                    "name": "Detail"
+                }
             }
         },
         "resources": {
